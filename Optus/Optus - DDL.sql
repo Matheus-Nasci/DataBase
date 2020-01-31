@@ -8,7 +8,7 @@ CREATE TABLE Estilos (
 );
 
 CREATE TABLE Musicos (
-	IdMusico INT PRIMARY KEY IDENTITY,
+	IdMusicos INT PRIMARY KEY IDENTITY,
 	Nome VARCHAR (200) NOT NULL
 );
 
@@ -21,26 +21,28 @@ CREATE TABLE Usuarios (
 	IdUsuario INT PRIMARY KEY IDENTITY,
 	Nome VARCHAR (200),
 	Email VARCHAR (200),
-	SENHA VARCHAR (200),
-	PERMISSAO VARCHAR (200),
+	Senha VARCHAR (200),
+	Permissao VARCHAR (200),
 	IdTipoUsuario INT FOREIGN KEY REFERENCES TipoUsuario (IdTipoUsuario)
-
-);
-
-
+	);
 
 CREATE TABLE Albuns (
 	IdAlbuns INT PRIMARY KEY IDENTITY,
 	Nome VARCHAR (200) NOT NULL,
-	DataLancamento VARCHAR (200) NOT NULL,
-	Minutos VARCHAR (200) NOT NULL,
-	Visualizaçao VARCHAR (200) NOT NULL,
+	DataLancamento VARCHAR (200),
+	Minutos VARCHAR (200),
+	Visualizaçao VARCHAR (200),
 	IdMusicos INT FOREIGN KEY REFERENCES Musicos (IdMusicos),
 	IdEstilo INT FOREIGN KEY REFERENCES Estilos (IdEstilo)
-);
+	);
 
 SELECT * FROM Estilos;
-SELECT * FROM Musicos;
+SELECT * FROM Musicos
 SELECT * FROM TipoUsuario;
 SELECT * FROM Usuarios;
 SELECT * FROM Albuns;
+
+DROP TABLE Albuns;
+DROP COLUMN Visualizaçao; 
+
+

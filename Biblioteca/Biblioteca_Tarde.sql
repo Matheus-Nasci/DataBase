@@ -45,3 +45,9 @@ DROP TABLE Generos;
 
 --Excluir Banco de Dados
 DROP DATABASE Biblioteca_Tarde;
+
+ALTER TABLE Livros
+DROP COLUMN Titulo;
+
+ALTER TABLE Livros
+ADD TituloLivro VARCHAR (200);

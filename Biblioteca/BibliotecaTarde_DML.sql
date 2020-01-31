@@ -17,4 +17,9 @@ WHERE IdGenero = 4;
 DELETE FROM Autores
 WHERE IdAutor = 2;
 
+INSERT INTO Livros(Titulo,IdAutor,IdGenero)
+VALUES	('Os camundongos', 3, 5),
+		('O Pequeno Príncipe', 3, 2),
+		('Usando o Amor', 4, 1),
+		('Super Chock', 5, 4);
 
