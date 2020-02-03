@@ -1,0 +1,8 @@
+CREATE DATABASE Pessoa_TardeDQL;
+
+USE Pessoa_TardeDDL;
+
+SELECT * FROM Telefone;
+SELECT * FROM CNH;
+SELECT * FROM Pessoa;
+SELECT * FROM Email;
